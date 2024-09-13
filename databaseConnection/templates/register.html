@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="x-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="Width=device-width, initial-scale=1.0">
+        <title>Mayinsoft Registration form</title>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='custom.css')}}">
+    </head>
+    <body>
+        <h1 style="text-align: center;color:crimson;font-size:25px">Mayinsoft Registration Form</h1>
+    
+        <!-- Display form validation errors for each field -->
+        {% for message in Form.name.errors %}
+            <div style="color: red;">{{ message }}</div>
+        {% endfor %}
+        
+        {% for message in Form.phoneNumber.errors %}
+            <div style="color: red;">{{ message }}</div>
+        {% endfor %}
+        
+        {% for message in Form.password.errors %}
+            <div style="color: red;">{{ message }}</div>
+        {% endfor %}
+
+        <form action="{{ url_for('registrationForm') }}" method="POST">
+            {{ Form.hidden_tag() }}
+        
+
+        <div class="table-section">
+        <table>
+            <tr>
+                <td>{{Form.name.label}}</td>
+                <td>{{Form.name}}</td>
+            </tr>
+            <tr>
+                <td>{{Form.password.label}}</td>
+                <td>{{Form.password}}</td>
+            </tr>
+            <tr>
+                <td>{{Form.phoneNumber.label}}</td>
+                <td>{{Form.phoneNumber}}</td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>{{Form.gender(class="gender-options")}}</td>
+            </tr>
+            <tr>
+                <td>{{Form.address.label}}</td>
+                <td>{{Form.address}}</td>
+            </tr>
+            <tr>
+                <td>{{Form.age.label}}</td>
+                <td>{{Form.age}}</td>
+            </tr>
+            <tr>
+                <td>Submit</td>
+                <td>{{Form.submit(class="anchor-button")}}</td>
+            </tr>
+        </table>
+        </div>
+    </form>
+    </body>
+</html>

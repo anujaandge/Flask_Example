@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Mayinsoft</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='custom.css')}}">
+    </head>    
+    <body>
+        <!--Header Section-->
+        <header class="header-section">
+            <div class="logo">Mayinsoft</div>
+            <div class="nav-buttons">
+                <a href="{{url_for('login')}}">Login</a>
+                <a href="{{url_for('registrationForm')}}">Register</a>
+            </div>
+    
+           <!-- <ul type="None">
+                <li><a href="{{url_for('login')}}">Login</a></li>
+                <li><a href="{{url_for('registrationForm')}}">Register</a></li>
+            </ul> -->  
+         </header>   
+         <!-- Banner Section with Welcome Message -->
+        <section class="banner">
+            <div class="welcome-message">
+                Welcome to Mayinsoft
+            </div>
+        </section>
+    </body>    
+</html>    
