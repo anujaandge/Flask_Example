@@ -9,6 +9,10 @@ def index():
 def home():
     return render_template('index.html')
 
+@app.route('/dashboard')
+def dashboard():
+    return render_template('dashboard.html')
+
 @app.route('/login',methods=['POST','GET'])
 def login():
     if request.method=='POST':
