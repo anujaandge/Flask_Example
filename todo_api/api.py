@@ -7,7 +7,7 @@ app=Flask(__name__)
 api=Api(app)
 
 # Configure MySQL database
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:Nitin%400806@localhost:3306/todo_db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://yourusername:yourpassword@localhost:3306/todo_db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Initialize the database
