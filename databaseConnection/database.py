@@ -2,8 +2,8 @@ import mysql.connector
 def databaseConnection():
     return mysql.connector.connect(
     host="localhost",
-    user='root',
-    password='Nitin@0806',
+    user='yourusername',
+    password='yourpassword',
     database='mydatabase'     #this can directly connected to the existed database
     )
     
