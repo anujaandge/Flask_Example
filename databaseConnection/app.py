@@ -9,8 +9,8 @@ app.secret_key="private_key"
 
 # MySQL configurations
 app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'Nitin@0806'
+app.config['MYSQL_USER'] = 'yourusername'
+app.config['MYSQL_PASSWORD'] = 'yourpassword'
 app.config['MYSQL_DB'] = 'mydatabase'
 
 # Initialize MySQL
